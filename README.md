@@ -1,1 +1,1 @@
-This repo contains the practice projects of web development from my university.
+This repo contains the practice project of web development from my university.
