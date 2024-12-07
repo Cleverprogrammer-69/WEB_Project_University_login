@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 }
 
-.login-form {
+form {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -44,12 +44,29 @@ label {
   color: #555;
 }
 
-input {
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 0.5rem;
 }
 
 button {
@@ -60,23 +77,39 @@ button {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out;
+  margin-top: 1rem;
 }
 
 button:hover {
   background-color: #ffffff;
   border: 2px #4caf50 solid;
   color: #4caf50;
+}
 
+.form-footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #555;
+}
+
+.auth-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 480px) {
-  /* .container {
-    padding: 1.5rem;
-  } */
-   .login-form{
+  form {
     padding-top: 149px;
     min-height: 100vh;
     min-width: 100vw;
-   }
+    border-radius: 0;
+    box-shadow: none;
+  }
 }
+
